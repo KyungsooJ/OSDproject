@@ -45,4 +45,5 @@ dependencies {
     compile "com.android.support:appcompat-v7:$supportLibraryVersion"
     compile "com.android.support:design:$supportLibraryVersion"
     compile "com.android.support:support-v4:$supportLibraryVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 }
