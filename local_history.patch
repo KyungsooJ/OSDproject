@@ -1,0 +1,24 @@
+Index: app/src/main/java/com/example/tomek/notepad/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/tomek/notepad/MainActivity.java	(date 1560181586361)
++++ app/src/main/java/com/example/tomek/notepad/MainActivity.java	(date 1560181586361)
+@@ -105,10 +105,14 @@
+ 
+                 ArrayList<Note> filteredNotesArrayList = new ArrayList<>();
+                 for (Note note : allNotesSearchArray) {
+-                    if (note.getRawText().contains(newText) || note.getTitle().contains(newText)) {
++                    if (note.getRawText().contains(newText)) {
++                        filteredNotesArrayList.add(note);
++                    }
++
++                    if (note.getTitle().contains(newText)) {
+                         filteredNotesArrayList.add(note);
+                     }
+-                }
++
+ 
+                 populateListView(filteredNotesArrayList);
+                 noteAdapter.notifyDataSetChanged();
